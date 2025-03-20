@@ -73,9 +73,4 @@ for files in os.listdir(directory):
 sampleBV.to_csv('C:/file/path/totalsamplebiovolume.csv')
 taxaBV.to_csv('C:/file/path/totaltaxabiovolume.csv')
 taxasampleBV.to_csv('C:/file/path/taxabysamplebiovolume.csv')
-cruiseBV.to_csv('C:/file/path/cruisetaxabiovolume.csv')
-
-
-#COULD ALSO ADD CALCULATION FOR AVERAGE BIOVOLUME OF TAXA, IF THAT DATA IS INTERESTING
-      
-        
+cruiseBV.to_csv('C:/file/path/cruisetaxabiovolume.csv')      
