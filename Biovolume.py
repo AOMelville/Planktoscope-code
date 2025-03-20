@@ -2,21 +2,18 @@
 """
 Created on Thu Feb 20 10:05:39 2025
 
-@author: OM
+@author: user
 """
 
 #Biovolume calculation from Ecotaxa tsv output "General export separated by NONE"
 #For equations see planktoscope manual and ecotaxa->export->summary->formulae
-
-#Math.sqrt does not work but numpy.sqrt works!
-#** means exponent
 
 import os
 import pandas as pd
 import math
 
 #Set working directory
-directory = os.chdir('C:/Users/User/Desktop/DFO Contract 2025/Biovolume/general_export_test/')
+directory = os.chdir('C:/file/path/')
 #Name extension
 ext = ('.tsv')
 
@@ -73,10 +70,10 @@ for files in os.listdir(directory):
         biovolumec=df[["Cruise", "Taxa", "BV sub sample", "Biovolume mm3/mL", "Biovolume mm3/m3"]]        
         cruiseBV=biovolumec.groupby(['Cruise', 'Taxa']).sum()
 
-sampleBV.to_csv('C:/Users/User/Desktop/DFO Contract 2025/Biovolume/general_export_test/totalsamplebiovolume.csv')
-taxaBV.to_csv('C:/Users/User/Desktop/DFO Contract 2025/Biovolume/general_export_test/totaltaxabiovolume.csv')
-taxasampleBV.to_csv('C:/Users/User/Desktop/DFO Contract 2025/Biovolume/general_export_test/taxabysamplebiovolume.csv')
-cruiseBV.to_csv('C:/Users/User/Desktop/DFO Contract 2025/Biovolume/general_export_test/cruisetaxabiovolume.csv')
+sampleBV.to_csv('C:/file/path/totalsamplebiovolume.csv')
+taxaBV.to_csv('C:/file/path/totaltaxabiovolume.csv')
+taxasampleBV.to_csv('C:/file/path/taxabysamplebiovolume.csv')
+cruiseBV.to_csv('C:/file/path/cruisetaxabiovolume.csv')
 
 
 #COULD ALSO ADD CALCULATION FOR AVERAGE BIOVOLUME OF TAXA, IF THAT DATA IS INTERESTING
