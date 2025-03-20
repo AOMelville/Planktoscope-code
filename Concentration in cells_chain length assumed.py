@@ -12,7 +12,7 @@ import pandas as pd
 import numpy as np
 
 #Set working directory
-directory = os.chdir('C:/Users/User/Desktop/DFO Contract 2025/Concentration/')
+directory = os.chdir('C:/file/path/Concentration/')
 #Name extension
 ext = ('.tsv')
 
@@ -61,4 +61,4 @@ for files in os.listdir(directory):
         df['Total concentration (cells/m3']=df['Total concentration (cells/mL)']*1000000
         
 
-df.to_csv('C:/Users/User/Desktop/DFO Contract 2025/Concentration/Concentration per sample in cells.csv')
+df.to_csv('C:/file/path/Concentration per sample in cells.csv')
