@@ -41,7 +41,7 @@ for files in os.listdir(directory):
         #Drop all the rows with duplicate data, including counts of 0
         df=df.drop_duplicates()
         
-        #Assuming chaing length of 6 (Chaetoceros sp.), 8 (Rhizosolenia), 2 (Thalassiosira)
+        #Assuming chaing length
         df['Cells']=np.where((df['Taxa']=="Asterionellopsis"), df['Total abundance']*1.3, 
                              np.where((df['Taxa']=="centric diatoms"), df['Total abundance']*1.44,
                                       np.where((df['Taxa']=="Chaetoceros sp."), df['Total abundance']*5.7, 
