@@ -12,7 +12,7 @@ import pandas as pd
 import numpy as np
 
 #Set working directory
-directory = os.chdir('C:/Users/User/Desktop/DFO Contract 2025/Abundance/')
+directory = os.chdir('C:/file/path/')
 #Name extension
 ext = ('.tsv')
 
@@ -41,4 +41,4 @@ for files in os.listdir(directory):
                                                                    df['Count']*1)))        
         totalsampleabund = df.groupby(['Sample', 'Taxa']).sum()
         
-totalsampleabund.to_csv('C:/Users/User/Desktop/DFO Contract 2025/Abundance/abundancebysample.csv')
+totalsampleabund.to_csv('C:/file/path.csv')
